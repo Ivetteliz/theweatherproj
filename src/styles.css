@@ -1,0 +1,114 @@
+body {
+  text-align: center;
+  margin-right: 20px;
+  background-image: url("../images/cloudy.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: black;
+  position: relative;
+  bottom: -22px;
+  font-size: 45px;
+  font-family: "Comfortaa";
+}
+
+#description {
+  color: black;
+  font-size: 15px;
+  font-weight: 900;
+  position: relative;
+  top: -25px;
+}
+
+#humidity,
+#wind-speed {
+  font-size: 15px;
+  font-weight: 900;
+  position: relative;
+  top: -43px;
+}
+
+#humidity {
+  margin-left: 23px;
+  margin-right: 4px;
+}
+
+.todayDate {
+  font-size: 15px;
+  position: relative;
+  top: -33px;
+}
+
+.col {
+  border: solid;
+  border-radius: 10px;
+  height: 400px;
+  margin: -2px;
+  margin-left: 2px;
+  background: rgba(100, 100, 100, 0.5);
+  transition: all 1s;
+}
+
+.container {
+  padding-left: calc(var(--bs-gutter-x) * 0.8);
+}
+
+.col:hover {
+  cursor: pointer;
+  height: 401px;
+  padding: 26px;
+}
+
+.mon,
+.tues,
+.wed,
+.thurs,
+.fri {
+  position: relative;
+  top: 371px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  border: solid;
+  background: rgba(211, 187, 140, 0.632);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+input {
+  border-radius: 20px;
+  text-align: center;
+}
+
+#current-location {
+  background: transparent;
+  border-block-color: transparent;
+  border-left: none;
+  border-right: none;
+  position: relative;
+  top: 69px;
+  right: 53px;
+  left: -105px;
+  font-size: 18px;
+}
+
+#search-button {
+  background: transparent;
+  border-block-color: transparent;
+  border-left: none;
+  border-right: none;
+}
+
+#search-form {
+  margin-top: 41px;
+  margin-right: -40px;
+}
+
+.fa-solid:hover {
+  cursor: pointer;
+  color: burlywood;
+}
