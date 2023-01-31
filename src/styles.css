@@ -56,12 +56,6 @@ h1 {
   padding-left: calc(var(--bs-gutter-x) * 0.8);
 }
 
-.col:hover {
-  cursor: pointer;
-  height: 401px;
-  padding: 26px;
-}
-
 .mon,
 .tues,
 .wed,
@@ -108,7 +102,23 @@ input {
   margin-right: -40px;
 }
 
+.col:hover {
+  cursor: pointer;
+  height: 401px;
+  padding: 26px;
+}
+
 .fa-solid:hover {
   cursor: pointer;
   color: burlywood;
+}
+
+#git-link {
+  color: black;
+  position: absolute;
+  margin-left: -700px;
+}
+
+#git-link:hover {
+  color: cornsilk;
 }
