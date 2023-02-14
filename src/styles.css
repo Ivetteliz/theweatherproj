@@ -43,10 +43,11 @@ h1 {
 }
 
 .col {
+  text-align: center;
   border: solid;
   border-radius: 10px;
   height: 400px;
-  margin: -2px;
+  margin: 250px;
   margin-left: 2px;
   background: rgba(100, 100, 100, 0.5);
   transition: all 1s;
@@ -56,15 +57,12 @@ h1 {
   padding-left: calc(var(--bs-gutter-x) * 0.8);
 }
 
-.mon,
-.tues,
-.wed,
-.thurs,
-.fri {
+.forecast-day {
   position: relative;
-  top: 371px;
+  top: 320px;
+  margin-left: -40px;
   font-family: "Amatic SC", cursive;
-  font-size: 30px;
+  font-size: 32px;
   border: solid;
   background: rgba(211, 187, 140, 0.632);
 }

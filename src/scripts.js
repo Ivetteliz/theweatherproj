@@ -33,6 +33,38 @@ let currentDate = currentTime.getDate();
 let todaysDate = document.querySelector("#presentTime");
 todaysDate.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} `;
 
+function displayForcast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class= "col">
+
+  <img
+  src="http://openweathermap.org/img/wn/50d@2x.png"
+  alt=""
+  width="42"/> 
+
+  <div class="weather-forecast-temperatures">
+
+  <span class="max-forecast-temp"> 18 </span>
+  <span class="min-forecast-temp"> 12 </span>
+  <span class= "forecast-day">${day}</span>
+  
+  </div>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 function showTemperature(response) {
   console.log(response.data);
   let temperature = Math.round((response.data.main.temp * 9) / 5 + 32);
