@@ -52,10 +52,6 @@ h1 {
   transition: all 1s;
 }
 
-.container {
-  padding-left: calc(var(--bs-gutter-x) * 0.8);
-}
-
 .forecast-day {
   position: relative;
   top: 320px;
