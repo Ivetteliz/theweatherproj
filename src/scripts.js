@@ -39,23 +39,23 @@ function displayForecast() {
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+    forecastHTML = `${forecastHTML}
   <div class= "col">
 
   <img
+  class="forecastIcons"
   src="http://openweathermap.org/img/wn/50d@2x.png"
   alt=""
-  width="42"/> 
+  width="85"/> 
 
   <div class="weather-forecast-temperatures">
 
   <span class="max-forecast-temp"> 18 </span>
   <span class="min-forecast-temp"> 12 </span>
+  </div>
+
   <span class= "forecast-day">${day}</span>
   
-  </div>
   </div>
   `;
   });

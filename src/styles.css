@@ -52,9 +52,18 @@ h1 {
   transition: all 1s;
 }
 
+.forecastIcons {
+  margin-top: 105px;
+}
+
+.weather-forecast-temperatures {
+  position: relative;
+  margin-left: 0px;
+}
+
 .forecast-day {
   position: relative;
-  top: 320px;
+  top: 147px;
   margin-left: -40px;
   font-family: "Amatic SC", cursive;
   font-size: 32px;
