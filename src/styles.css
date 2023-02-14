@@ -47,7 +47,7 @@ h1 {
   border: solid;
   border-radius: 10px;
   height: 400px;
-  margin: 250px;
+  width: 250px;
   background: rgba(100, 100, 100, 0.5);
   transition: all 1s;
 }
