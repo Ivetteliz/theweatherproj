@@ -33,7 +33,7 @@ let currentDate = currentTime.getDate();
 let todaysDate = document.querySelector("#presentTime");
 todaysDate.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} `;
 
-function displayForcast() {
+function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 

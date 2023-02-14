@@ -48,7 +48,6 @@ h1 {
   border-radius: 10px;
   height: 400px;
   margin: 250px;
-  margin-left: 2px;
   background: rgba(100, 100, 100, 0.5);
   transition: all 1s;
 }
