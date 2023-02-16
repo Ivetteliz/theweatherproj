@@ -55,14 +55,38 @@ h1 {
   margin-top: 105px;
 }
 
+.forecast-description {
+  color: blue;
+}
+
+.forecast-humidity {
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  margin-left: -92px;
+}
+
+.forecast-wind {
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  margin-right: -92px;
+  margin-top: -20px;
+}
+
 .weather-forecast-temperatures {
   position: relative;
   margin-left: 0px;
+  font-weight: 500;
+}
+
+.min-forecast-temp {
+  opacity: 0.7;
 }
 
 .forecast-day {
   position: relative;
-  top: 147px;
+  top: 100px;
   margin-left: 2px;
   font-family: "Amatic SC", cursive;
   font-size: 32px;
@@ -115,11 +139,12 @@ input {
 }
 
 #git-link {
-  color: black;
+  color: cornsilk;
   position: absolute;
-  margin-left: -700px;
+  margin-left: -710px;
+  margin-top: 27px;
 }
 
 #git-link:hover {
-  color: cornsilk;
+  color: rgb(226, 132, 55);
 }

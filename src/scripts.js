@@ -38,7 +38,7 @@ function formatDay(timestamp) {
   let day = date.getDay();
   let days = [
     "Sunday",
-    "Monday",
+    "MOnday",
     "Tuesday",
     "Wednesday",
     "Thursday",
@@ -50,6 +50,8 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data.daily);
+
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
 
@@ -66,6 +68,9 @@ function displayForecast(response) {
   alt=""
   width="85"/> 
   
+<div class= "forecast-description">
+${forecastDay.weather[0].description}
+</div>
 
   <div class="weather-forecast-temperatures">
 
@@ -74,13 +79,23 @@ function displayForecast(response) {
   </span>
 
 
-  <span class="min-forecast-temp">
+  <span class="min-forecast-temp"> 
   ${Math.round(forecastDay.temp.min * 9) / 5 + 32}º 
   </span>
   
   </div>
+
+  <span class= "forecast-humidity">
+Humidity: ${forecastDay.humidity}
+</span>
+
+<div class="forecast-wind">
+Wind Speed:${Math.round(forecastDay.wind_speed)}
+</div>
   
-  <span class= "forecast-day">${formatDay(forecastDay.dt)}</span>
+  <span class= "forecast-day">
+  ${formatDay(forecastDay.dt)}
+  </span>
   
   </div>
   `;
@@ -93,12 +108,11 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "0dc40d3d7cda209ca40e77430c74cf57";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   let temperature = Math.round((response.data.main.temp * 9) / 5 + 32);
   let cityName = document.querySelector("#city-name");
   let searchBar = document.querySelector("#temp");
