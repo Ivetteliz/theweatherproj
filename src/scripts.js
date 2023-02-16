@@ -33,15 +33,31 @@ let currentDate = currentTime.getDate();
 let todaysDate = document.querySelector("#presentTime");
 todaysDate.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} `;
 
-function displayForecast(response) {
-  console.log(response.data.daily);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
+  return days[day];
+}
+
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay) {
-    forecastHTML = `${forecastHTML}
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML = `${forecastHTML}
   <div class= "col">
 
   <img
@@ -53,15 +69,22 @@ function displayForecast(response) {
 
   <div class="weather-forecast-temperatures">
 
-  <span class="max-forecast-temp"> ${forecastDay.temp.max}º </span>
+  <span class="max-forecast-temp"> 
+  ${Math.round(forecastDay.temp.max * 9) / 5 + 32}º 
+  </span>
 
-  <span class="min-forecast-temp"> ${forecastDay.temp.min}º </span>
+
+  <span class="min-forecast-temp">
+  ${Math.round(forecastDay.temp.min * 9) / 5 + 32}º 
+  </span>
+  
   </div>
   
-  <span class= "forecast-day">${forecastDay.dt}</span>
+  <span class= "forecast-day">${formatDay(forecastDay.dt)}</span>
   
   </div>
   `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
