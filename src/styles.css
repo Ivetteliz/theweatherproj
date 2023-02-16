@@ -58,35 +58,36 @@ h1 {
 .forecast-description {
   color: blue;
 }
-
-.forecast-humidity {
-  font-size: 13px;
-  font-weight: 500;
-  position: relative;
-  margin-left: -92px;
-}
-
-.forecast-wind {
-  font-size: 13px;
-  font-weight: 500;
-  position: relative;
-  margin-right: -92px;
-  margin-top: -20px;
-}
-
 .weather-forecast-temperatures {
   position: relative;
-  margin-left: 0px;
+  margin-left: 10px;
   font-weight: 500;
+  font-size: 35px;
 }
 
 .min-forecast-temp {
   opacity: 0.7;
+  margin-left: 25px;
+}
+
+.forecast-humidity {
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  margin-left: -124px;
+}
+
+.forecast-wind {
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  margin-right: -120px;
+  margin-top: -23px;
 }
 
 .forecast-day {
   position: relative;
-  top: 100px;
+  top: 70px;
   margin-left: 2px;
   font-family: "Amatic SC", cursive;
   font-size: 32px;

@@ -75,12 +75,12 @@ ${forecastDay.weather[0].description}
   <div class="weather-forecast-temperatures">
 
   <span class="max-forecast-temp"> 
-  ${Math.round(forecastDay.temp.max * 9) / 5 + 32}º 
+  ${Math.round((forecastDay.temp.max * 9) / 5 + 32)}º 
   </span>
 
 
   <span class="min-forecast-temp"> 
-  ${Math.round(forecastDay.temp.min * 9) / 5 + 32}º 
+  ${Math.round((forecastDay.temp.min * 9) / 5 + 32)}º 
   </span>
   
   </div>
